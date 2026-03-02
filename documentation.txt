@@ -1,0 +1,102 @@
+Written Code Done By
+
+Project Name    -> Address Book Management System
+Name            -> Hitesh Sunil Patil
+Batch           -> Advanced C 25044
+Student Id      -> 25044_043
+Date            -> 29/2/2026
+
+1. Project Overview :->
+
+This project is a console-based Address Book Management System developed in C language.
+It allows users to store, Create, edit, search, List, and delete contact information.
+The system ensures data validation and prevents duplicate phone numbers and email IDs.
+
+
+2. Features :->
+
+:-> Create Contact
+:-> Edit Contact
+:-> Delete Contact
+:-> Search Contact
+:-> List Contact
+:-> Save contacts to file
+:-> Load contacts from file
+:-> Phone number validation (10 digits only)
+:-> Email validation (format + duplicate check)
+:-> Unique phone and email validation
+
+3. Technologies Used :->
+
+-> C Programming Language
+-> Structures
+-> File Handling
+-> String Handling
+-> Loops & Conditional Statements
+
+4. Project Structure :->
+
+Files:->
+=> main.c
+=> contact.c
+=> contact.h
+=> file.c
+=> file.h
+=> contact.csv
+=> documentation.txt
+
+5. Structure Used :->
+
+    typedef struct
+    {
+        char name[100];
+        char phone[20];
+        char email[100];
+    } Contact;
+
+6. Validation Logic :->
+
+= Phone Validation:
+= Must be 10 digits
+= Only numbers allowed
+= No duplicate allowed
+
+Return values:
+= 0 → Invalid format
+= 1 → Valid
+= 2 → Duplicate
+
+Email Validation :->
+
+= Must contain exactly one '@'
+= Must contain at least one '.'
+= Dot cannot be adjacent to '@'
+= No consecutive dots
+= No spaces
+= No duplicate allowed
+
+Return values:
+= 0 → Invalid format
+= 1 → Valid
+= 2 → Duplicate
+
+7. For Compile & Run Use any one :->
+
+Compile => gcc *.c
+Run => ./a.out
+ 
+Compile => gcc main.c contact.c file.c -o addressbook
+Run => ./addressbook
+
+
+8. Sample Output =>
+
+-------------------------------------------------------------------------------
+| Index | Name                 | Phone           | Email                     |
+-------------------------------------------------------------------------------
+| 1     | dev                  | 9890552982      | dev23@gmail.com           |
+| 2     | hitesh               | 9921134796      | hitesh@gmail.com          |
+| 3     | hitesh patil         | 9090887890      | hiteshpatil@gmail.com     |
+| 4     | shubham patil        | 9890553942      | shubham@gmail.com         |
+-------------------------------------------------------------------------------
+
